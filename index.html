@@ -1,0 +1,75 @@
+<!-- Déclaration du type de document HTML5 -->
+<!DOCTYPE html>
+
+
+<!-- Début du document HTML avec la langue définie sur le français -->
+<html lang="fr">
+
+
+
+  <head>
+
+    <!-- Déclaration du jeu de caractères en UTF-8 pour supporter les accents et caractères spéciaux -->
+    <meta charset="UTF-8">
+
+    <!-- Meta pour définir la largeur de la fenêtre d'affichage et assurer la responsivité sur mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre de la page affiché dans l'onglet du navigateur -->
+    <title>Test d'Auto-Évaluation : Transformation Intérieure</title>
+
+    <!-- Lien vers le fichier CSS externe qui contient tous les styles de la page -->
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+
+
+  <body>
+
+    <!-- Élément canvas servant à afficher l'animation du ciel nocturne -->
+    <canvas id="night-sky"></canvas>
+
+    <!-- Élément principal qui contient le contenu central de la page -->
+    <main>
+
+      <!-- Conteneur principal du test avec une classe pour appliquer les styles spécifiques -->
+      <div class="test-container">
+
+        <!-- Titre principal du test avec un style inline pour centrer le texte et ajouter une marge inférieure -->
+        <h1 style="text-align: center; margin-bottom: 3rem;">Auto-Test Pour Découvrir Votre Force Intérieure</h1>
+
+        <!-- Conteneur qui sera rempli dynamiquement avec les questions du test -->
+        <div id="question-container"></div>
+
+        <!-- Barre de progression visuelle pour indiquer l'avancement dans le test -->
+        <div class="progress-bar">
+
+          <!-- Élément interne de la barre qui se remplit progressivement -->
+          <div class="progress" id="progress"></div>
+
+        </div>
+
+
+        <!-- Zone d'affichage du résultat final du test, initialement masquée -->
+        <div id="result" style="display: none;"></div>
+
+        <!-- Bouton pour redémarrer le test, initialement masqué -->
+        <button id="restart" style= "display: none";>Reinitialiser</button>
+      </div>
+
+      <!-- Conteneur pour le lecteur audio -->
+  <div id="audioPlayerContainer">
+    <audio id="audioPlayer" controls preload="metadata" loop autoplay muted>
+      <source src="relaxation.mp3" type="audio/mpeg">
+      Votre navigateur ne supporte pas l'élément audio.
+    </audio>
+  </div>
+
+
+    </main>
+    
+    <!-- Inclusion du fichier JavaScript externe qui contient toute la logique du test et de l'animation -->
+    <script src="script.js"></script>
+  </body>
+</html>

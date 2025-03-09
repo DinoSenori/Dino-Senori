@@ -1,0 +1,232 @@
+/* ===================================================== */
+/* Fichier CSS externe pour la mise en forme de la page  */
+/* ===================================================== */
+
+/* Définition des variables CSS globales pour uniformiser les couleurs et styles */
+:root {
+    /* Couleur primaire utilisée pour certaines transitions et survols */
+    --primary-color: #1a237e; /* Bleu foncé */
+    /* Couleur secondaire pour les boutons et bordures */
+    --secondary-color: #7c4dff; /* Violet clair */
+    /* Couleur d'accent pour mettre en évidence les titres et éléments importants */
+    --accent-color: #ffd700; /* Jaune doré */
+    /* Couleur du texte, ici en blanc pour contraster avec le fond sombre */
+    --text-color: #ffffff; /* Blanc */
+    /* Couleur de fond de la page */
+    --background-color: #000033; /* Bleu très foncé, presque noir */
+  }
+  
+  /* Styles appliqués à l'élément <body> de la page */
+  body {
+    /* Police sans-serif pour une lecture claire */
+    font-family: Arial, sans-serif; /* Police principale */
+    /* Suppression des marges par défaut */
+    margin: 0; /* Pas de marge autour du body */
+    /* Suppression du padding par défaut */
+    padding: 0; /* Pas de remplissage intérieur */
+    /* Couleur de fond récupérée depuis la variable définie */
+    background-color: var(--background-color); /* Fond sombre */
+    /* Couleur du texte récupérée depuis la variable définie */
+    color: var(--text-color); /* Texte en blanc */
+    /* Utilisation de flexbox pour disposer les éléments en colonne */
+    display: flex; /* Mode flexbox activé */
+    flex-direction: column; /* Organisation verticale des éléments */
+    /* Hauteur minimale égale à la hauteur de la fenêtre pour occuper tout l'écran */
+    min-height: 100vh; /* 100% de la hauteur de la fenêtre */
+  }
+  
+  /* Note : Le header a été supprimé pour placer le titre directement dans le conteneur du test */
+  
+  /* Styles appliqués à l'élément <main> qui contient le contenu central */
+  main {
+    /* Permet à l'élément de prendre tout l'espace disponible */
+    flex: 1; /* Flex-grow : occupe tout l'espace restant */
+    /* Utilisation de flexbox pour centrer le contenu */
+    display: flex; /* Mode flexbox activé */
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+    /* Ajout d'un padding de 2rem autour du contenu */
+    padding: 2rem; /* Espace intérieur autour du main */
+    /* Position relative pour positionner correctement les éléments enfants */
+    position: relative; /* Position relative par rapport au conteneur */
+    /* z-index supérieur pour que le contenu soit au-dessus des animations */
+    z-index: 1; /* Niveau d'empilement */
+  }
+  
+  /* Styles pour le conteneur du test */
+  .test-container {
+    /* Bords arrondis pour un rendu plus doux */
+    border-radius: 10px; /* Rayon de bordure de 10px */
+    /* Espacement intérieur pour éviter que le contenu touche les bords */
+    padding: 2rem; /* Padding de 2rem */
+    /* Largeur maximale pour limiter l'extension du conteneur */
+    max-width: 600px; /* Largeur maximale de 600px */
+    /* La largeur occupe 100% de l'espace disponible dans son conteneur */
+    width: 100%; /* Largeur complète */
+  }
+  
+  /* Styles pour les titres h1 et h2 */
+  h1, h2 {
+    /* Couleur d'accent pour mettre en évidence les titres */
+    color: var(--accent-color); /* Jaune doré */
+  }
+  
+  /* Styles pour les éléments de classe "question" */
+  .question {
+    /* Marge inférieure pour espacer les questions */
+    margin-bottom: 1.5rem; /* Espace sous chaque question */
+  }
+  
+  /* Styles spécifiques aux titres à l'intérieur d'une question */
+  .question h2 {
+    /* Centrage du texte pour une meilleure lisibilité */
+    text-align: center; /* Centrage horizontal du texte */
+  }
+  
+  /* Styles pour le conteneur des options de réponse */
+  .options {
+    /* Utilisation de flexbox pour organiser les options en colonne */
+    display: flex; /* Mode flexbox activé */
+    flex-direction: column; /* Organisation verticale */
+  }
+  
+  /* Styles pour chaque option de réponse */
+  .option {
+    /* Couleur de fond avec transparence pour un effet léger */
+    background-color: rgba(124, 77, 255, 0.2); /* Violet clair transparent */
+    /* Bordure solide utilisant la couleur secondaire */
+    border: 1px solid var(--secondary-color); /* Bordure de 1px en violet clair */
+    /* Bords arrondis pour un aspect plus doux */
+    border-radius: 5px; /* Rayon de bordure de 5px */
+    /* Espace intérieur pour le texte de l'option */
+    padding: 0.5rem; /* Padding de 0.5rem */
+    /* Marge inférieure pour séparer les options */
+    margin-bottom: 1.5rem; /* Espace de 0.5rem en dessous */
+    /* Curseur en forme de pointeur pour indiquer la cliquabilité */
+    cursor: pointer; /* Curseur type pointeur */
+    /* Transition pour adoucir le changement de couleur lors du survol */
+    transition: background-color 0.3s ease; /* Durée 0.3s, effet 'ease' */
+  }
+  
+  /* Styles pour l'option lorsqu'elle est survolée par la souris */
+  .option:hover {
+    /* Changement de la couleur de fond lors du survol, en augmentant l'opacité */
+    background-color: rgba(124, 77, 255, 0.4); /* Violet clair plus opaque */
+  }
+  
+  /* Styles pour la barre de progression */
+  .progress-bar {
+    /* Couleur de fond légère et semi-transparente pour la barre */
+    background-color: rgba(255, 255, 255, 0.2); /* Blanc très transparent */
+    /* Hauteur fixe de la barre de progression */
+    height: 10px; /* Hauteur de 10px */
+    /* Bords arrondis pour une apparence douce */
+    border-radius: 5px; /* Rayon de bordure de 5px */
+    /* Marge supérieure pour séparer la barre du reste du contenu */
+    margin-top: 1rem; /* Espace de 1rem au-dessus */
+    /* Masquage de tout dépassement du contenu à l'intérieur */
+    overflow: hidden; /* Contenu débordant masqué */
+  }
+  
+  /* Styles pour l'élément interne de la barre de progression */
+  .progress {
+    /* Couleur de fond utilisant la couleur d'accent */
+    background-color: var(--accent-color); /* Jaune doré */
+    /* Hauteur occupant 100% de la barre parente */
+    height: 100%; /* Hauteur complète */
+    /* Largeur initiale de 0 pour être animée en fonction du progrès */
+    width: 0; /* Départ à 0% */
+    /* Transition pour adoucir l'animation de la largeur */
+    transition: width 0.3s ease; /* Durée 0.3s, effet 'ease' */
+  }
+  
+  /* Styles pour l'élément résultat */
+  #result {
+    /* Centrage du texte affiché dans le résultat */
+    text-align: center; /* Texte centré */
+  }
+  
+  /* Styles généraux pour tous les boutons */
+  button {
+    /* Couleur de fond utilisant la couleur secondaire */
+    background-color: var(--secondary-color); /* Violet clair */
+    /* Couleur du texte en blanc */
+    color: var(--text-color); /* Blanc */
+    /* Pas de bordure */
+    border: none; /* Suppression de la bordure */
+    /* Padding pour agrandir le bouton et améliorer le clic */
+    padding: 0.5rem 1rem; /* 0.5rem vertical, 1rem horizontal */
+    /* Bords arrondis pour un aspect moderne */
+    border-radius: 5px; /* Rayon de bordure de 5px */
+    /* Curseur pointeur pour indiquer que le bouton est cliquable */
+    cursor: pointer; /* Curseur en forme de main */
+    /* Transition pour adoucir le changement de couleur lors du survol */
+    transition: background-color 0.3s ease; /* Durée 0.3s, effet 'ease' */
+  }
+  
+  /* Styles pour le bouton lorsqu'il est survolé par la souris */
+  button:hover {
+    /* Changement de la couleur de fond au survol, utilisant la couleur primaire */
+    background-color: var(--primary-color); /* Bleu foncé */
+  }
+  
+  /* Styles spécifiques pour le bouton "Recommencer" */
+  #restart {
+    /* Affichage du bouton en tant que bloc pour centrer */
+    display: block; /* Affichage en bloc */
+    /* Marge verticale pour centrer horizontalement le bouton */
+    margin: 1rem auto; /* 1rem en haut et en bas, auto sur les côtés */
+  }
+  
+  /* Styles pour l'élément canvas qui affiche le ciel nocturne */
+  #night-sky {
+    /* Positionnement fixe pour rester en arrière-plan */
+    position: fixed; /* Position fixe par rapport à la fenêtre */
+    /* Positionné en haut à gauche */
+    top: 0; /* Distance 0 du haut */
+    left: 0; /* Distance 0 de la gauche */
+    /* Prend toute la largeur de la fenêtre */
+    width: 100%; /* 100% de la largeur */
+    /* Prend toute la hauteur de la fenêtre */
+    height: 100%; /* 100% de la hauteur */
+    /* z-index inférieur pour placer le canvas derrière le contenu */
+    z-index: 0; /* Niveau d'empilement le plus bas */
+  }
+  
+  /* Media query pour adapter le style sur les petits écrans (moins de 600px de large) */
+  @media (max-width: 600px) {
+    .test-container {
+      /* Réduction du padding pour s'adapter aux petits écrans */
+      padding: 1rem; /* Padding réduit à 1rem */
+    }
+  }
+ 
+ /* Conteneur du lecteur audio */
+    #audioPlayerContainer {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: rgba(8, 12, 40, 0.9); /* Bleu profond d'une nuit étoilée */
+      border-radius: 15px;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombre plus prononcée pour un effet élégant */
+      display: flex;
+      align-items: center;
+      width: 270px;
+    }
+
+    /* Style pour le lecteur audio */
+    #audioPlayerContainer {
+      position: fixed; /* Position fixe pour rester visible même en scrollant */
+      bottom: 10px; /* Positionné à 10px du bas */
+      left: 10px; /* Positionné à 10px de la gauche */
+      background-color: #skyblue; /* Couleur de fond douce */
+      border: 1px solid #skyblue; /* Bordure fine et grise */
+      border-radius: 10px; /* Coins arrondis */
+      padding: 5px; /* Espacement interne */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Ombre pour un effet élégant */
+    }
+
+    audio {
+      width: 270px; /* Réduit la largeur du lecteur audio */
+    }
